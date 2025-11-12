@@ -9,7 +9,7 @@ from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 from typing import List, Dict
 
-max_clicks = 300  # 무한루프 방지
+max_clicks = 500  # 무한루프 방지
 
 class FoodspringCrawler:
     """Foodspring 셀러 페이지 크롤러"""
@@ -218,7 +218,7 @@ class FoodspringCrawler:
             
             # 상세 이미지들 추출
             detail_image_selectors = [
-                "#goods-header-style-inner p img",
+                "#goods-body-style-inner img",
             ]
             
             detail_images = []
@@ -316,8 +316,8 @@ def main():
     """메인 실행 함수"""
     # 설정
     SELLER_URL = "https://www.foodspring.co.kr/seller/3359"
-    DELAY = 0.1  # 상품 클릭 사이의 딜레이(초)
-    HEADLESS = False  # True로 설정하면 브라우저 창이 안 보임
+    DELAY = 0  # 상품 클릭 사이의 딜레이(초)
+    HEADLESS = True  # True로 설정하면 브라우저 창이 안 보임
     
     # 크롤러 생성
     crawler = FoodspringCrawler(delay=DELAY, headless=HEADLESS)
