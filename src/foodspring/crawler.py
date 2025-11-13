@@ -315,7 +315,7 @@ class FoodspringCrawler:
 def main():
     """메인 실행 함수"""
     # 설정
-    SELLER_URL = "https://www.foodspring.co.kr/seller/3359"
+    SELLER_URL = "https://www.foodspring.co.kr/seller/2716"
     DELAY = 0  # 상품 클릭 사이의 딜레이(초)
     HEADLESS = True  # True로 설정하면 브라우저 창이 안 보임
     
